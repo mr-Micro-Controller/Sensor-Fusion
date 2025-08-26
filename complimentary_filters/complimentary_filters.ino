@@ -77,11 +77,6 @@ void loop() {
     ay = (float)raway/accSense;
     az = (float)rawaz/accSense; 
 
-
-    (ax>1)  ? (ax=1)  : (ax=ax);
-    (ax<-1) ? (ax=-1) : (ax=ax);
-    (ay>1)  ? (ay=1)  : (ay=ay);
-    (ay<-1) ? (ay=-1) : (ay=ay);
     
     angleX = atan2(ax,sqrt(ay*ay + az*az)) * deg;
     angleY = atan2(ay,sqrt(ax*ax + az*az)) * deg;
